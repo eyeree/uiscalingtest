@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://danayxjhd6ni1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktqrk"]
+bg_color = Color(0.118581, 0.118581, 0.118581, 1)
+
+[node name="PanelContainer" type="PanelContainer"]
+theme_override_styles/panel = SubResource("StyleBoxFlat_ktqrk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "This is the
+nicely scaled
+ui!"
+horizontal_alignment = 1

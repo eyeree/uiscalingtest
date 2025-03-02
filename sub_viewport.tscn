@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cehfrnkmh8njr"]
+
+[ext_resource type="PackedScene" uid="uid://d2lxsusdav114" path="res://3d_scene.tscn" id="1_vp4ha"]
+[ext_resource type="PackedScene" uid="uid://danayxjhd6ni1" path="res://ui.tscn" id="2_ktqrk"]
+
+[node name="PanelContainer" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(926, 1024)
+size_2d_override = Vector2i(2048, 2048)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+
+[node name="3dScene" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_vp4ha")]
+
+[node name="UI" parent="HBoxContainer" instance=ExtResource("2_ktqrk")]
+layout_mode = 2

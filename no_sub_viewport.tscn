@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://drldbo1b280yk"]
+
+[ext_resource type="PackedScene" uid="uid://d2lxsusdav114" path="res://3d_scene.tscn" id="1_shic4"]
+[ext_resource type="PackedScene" uid="uid://danayxjhd6ni1" path="res://ui.tscn" id="2_qlu3p"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="3dScene" parent="." instance=ExtResource("1_shic4")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("2_qlu3p")]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -98.0
+grow_horizontal = 0
+grow_vertical = 2
